@@ -9,4 +9,9 @@
   }
   add_action( 'wp_enqueue_scripts', 'enqueue_theme_script', 9999);
 
+  //add dynamic title tag support
+  function freecodecamp_theme_support (){
+    add_theme_support('title-tag');
+  }
+  add_action('after_setup_theme', 'freecodecamp_theme_support');
 ?>
