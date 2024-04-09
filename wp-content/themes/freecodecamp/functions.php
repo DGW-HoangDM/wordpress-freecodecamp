@@ -14,4 +14,14 @@
     add_theme_support('title-tag');
   }
   add_action('after_setup_theme', 'freecodecamp_theme_support');
+
+  //register menu
+  function freecodecamp_register_menus (){
+    $location = array(
+      'primary' => 'Desktop Primary Left Sidebar',
+      'footer' => 'Footer Menu Items',
+    );
+    register_nav_menus($location);
+  }
+  add_action('init', 'freecodecamp_register_menus');
 ?>
