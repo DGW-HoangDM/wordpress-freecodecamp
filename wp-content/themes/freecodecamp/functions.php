@@ -25,4 +25,15 @@
     register_nav_menus($location);
   }
   add_action('init', 'freecodecamp_register_menus');
+
+  //checkThumbnail
+  function checkThumbnail(){
+    $thumbnail = get_template_directory_uri().'/assets/images/thumbs/1.jpg';
+
+    if ( has_post_thumbnail() ) {
+      echo the_post_thumbnail_url();
+    }else {
+      echo $thumbnail;
+    }
+  }
 ?>
