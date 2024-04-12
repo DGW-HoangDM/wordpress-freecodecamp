@@ -784,3 +784,8 @@ text-decoration: underline;
 .contant_box_404 {
   margin-top: -50px;
 }
+
+.pagination {
+  justify-content: center;
+  margin-bottom: 20px;
+}
