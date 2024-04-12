@@ -58,6 +58,9 @@
         <?php
           dynamic_sidebar('sidebar-1');
         ?>
+        <?php
+          get_search_form();
+        ?>
       </div>
     </nav>
   </header>
