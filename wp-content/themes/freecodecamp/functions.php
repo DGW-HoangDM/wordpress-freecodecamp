@@ -41,4 +41,32 @@
       echo $thumbnail;
     }
   }
+
+  //customs widget
+  function freecodecamp_widgets_area(){
+    register_sidebar(
+      array(
+        'before_title' => '',
+        'after_title' => '',
+        'before_widget'  => '<ul class="social-list list-inline py-3 mx-auto"',
+        'after_widget'   => "</ul>",
+        'name' => 'Sidebar Area',
+        'id' => 'sidebar-1',
+        'description' => 'Sidebar widget area',
+      ),
+    );
+
+    register_sidebar(
+      array(
+        'before_title' => '',
+        'after_title' => '',
+        'before_widget'  => '<footer class="footer text-center py-2 theme-bg-dark">',
+        'after_widget'   => "</footer>",
+        'name' => 'Footer Area',
+        'id' => 'footer-1',
+        'description' => 'Footer widget area',
+      ),
+    );
+  }
+  add_action('widgets_init', 'freecodecamp_widgets_area');
 ?>
