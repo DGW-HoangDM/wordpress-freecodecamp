@@ -27,7 +27,13 @@
               <li><a href="<?php echo home_url() ?>/programs">Programs</a></li>
               <li><a href="<?php echo home_url() ?>/events">Events</a></li>
               <li><a href="<?php echo home_url() ?>/campuses">Campuses</a></li>
-              <li><a href="<?php echo home_url() ?>/blog">Blog</a></li>
+              <?php 
+                $classActive = '';
+                if(get_post_type() == 'post'){
+                  $classActive = 'current-menu-item';
+                }
+              ?>
+              <li class="<?php echo $classActive; ?>"><a href="<?php echo home_url() ?>/blog">Blog</a></li>
             </ul>
           </nav>
           <div class="site-header__util">
