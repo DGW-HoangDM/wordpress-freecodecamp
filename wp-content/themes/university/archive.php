@@ -1,3 +1,4 @@
+<!-- show all post -->
 <?php
 get_header();
 ?>

@@ -25,7 +25,14 @@
             <ul>
               <li <?php if(is_page('about-us') or wp_get_post_parent_id(get_the_ID())){ echo "class='current-menu-item'"; } ?>><a href="<?php echo home_url() ?>/about-us">About Us</a></li>
               <li><a href="<?php echo home_url() ?>/programs">Programs</a></li>
-              <li><a href="<?php echo home_url() ?>/events">Events</a></li>
+
+              <?php
+                $classActiveEvent = '';
+                if(get_post_type() == 'event'){
+                  $classActiveEvent = 'current-menu-item';
+                }
+              ?>
+              <li class="<?php echo $classActiveEvent; ?>"><a href="<?php echo home_url() ?>/event">Events</a></li>
               <li><a href="<?php echo home_url() ?>/campuses">Campuses</a></li>
               <?php 
                 $classActive = '';
